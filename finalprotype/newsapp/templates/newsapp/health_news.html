@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>News</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'newsapp/news.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  </head>
+  <body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Drone Blogs And News
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="container">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'blog:blog_home_page' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog:blog_listing' %}">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">News
+              </a>
+              <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'newsapp:sports_news' %}">sports</a>
+                <a class="dropdown-item" href="{% url 'newsapp:science_news' %}">science</a>
+                <a class="dropdown-item" href="{% url 'newsapp:tech_news' %}">tech</a>
+                <a class="dropdown-item" href="{% url 'newsapp:international_news' %}">international</a>
+                <a class="dropdown-item" href="{% url 'newsapp:health_news' %}">health</a>
+                <a class="dropdown-item" href="{% url 'newsapp:business_news' %}">business</a>
+                <a class="dropdown-item" href="{% url 'newsapp:entertainment_news' %}">entertainment</a>
+              </div>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </nav>
+
+  <header>
+
+      <div class="ad-section text-center">
+        Space for advertisment.
+      </div>
+
+      <div class="container">
+        <!-- Grid row -->
+        <div class="row">
+
+
+
+         <!-- Grid column -->
+        <div class="col-md-12 " style="background: linear-gradient(#ffffff, #89fffd);">
+
+        <ul class="nav aqua-gradient py-4 mb-4 font-weight-bold z-depth-1">
+        <li class="nav-item">
+        <a class="nav-link active white-text" href="{% url 'newsapp:business_news' %}">business</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link white-text" href="{% url 'newsapp:tech_news' %}">technology</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link white-text" href="{% url 'newsapp:entertainment_news' %}">entertainment</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link white-text" href="{% url 'newsapp:science_news' %}">science</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link white-text" href="{% url 'newsapp:sports_news' %}">sports</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link white-text" href="{% url 'newsapp:health_news' %}">health</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link white-text" href="{% url 'newsapp:international_news' %}">International</a>
+        </li>
+        </ul>
+
+
+        <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9 news-content">
+      <div class="container">
+        <div class="row">
+
+          {% for x in api.articles %}
+          <!-- Card starts here -->
+          <div class="card" style="width: 16rem;">
+            <img class="card-img-top" src="{{x.urlToImage}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{ x.title| title }}</h5>
+              <p class="card-text">{{ x.description|truncatechars:150 }}</p>
+              <a href="{{x.url}}" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+          <!-- Card ends here -->
+          {% endfor %}
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-3 ">
+      <div class="ad-right">
+
+      </div>
+      <div class="ad-right">
+
+      </div>
+      <div class="ad-right">
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+<div class="container">
+  <div class="ad-section text-center">
+    Space for advertisment.
+  </div>
+
+  <div class="manual-footer text-center">
+    <div class="social-buttons">
+          <a href="https://www.facebook.com/prathmesh.nandurkar.50/"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/prathmesh2048/"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919145691805"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://github.com/prathmesh2048"><i class="fab fa-github"></i>      </a>
+          <p>&copy; 2020 mywebsite.com<p>
+
+
+      </div>
+  </div>
+
+</div>
+
+
+
+<script src="https://use.fontawesome.com/a75a435f47.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

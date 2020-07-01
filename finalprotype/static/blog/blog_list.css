@@ -1,0 +1,19 @@
+body{
+
+}
+.blogs{
+margin: 0px 50px;
+}
+
+.card-style{
+width:100%;
+height: 100%;
+margin:100px;
+padding:5px;
+}
+.ad-banner{
+width:320px;
+height:250px;
+border: 5px solid #ecf542;
+margin: 1vh;
+}

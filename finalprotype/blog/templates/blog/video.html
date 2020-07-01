@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video testing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'blog/video.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Drone Blogs And News
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="container">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'blog:blog_home_page' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog:blog_listing' %}">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">News
+              </a>
+              <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'newsapp:sports_news' %}">sports</a>
+                <a class="dropdown-item" href="{% url 'newsapp:science_news' %}">science</a>
+                <a class="dropdown-item" href="{% url 'newsapp:tech_news' %}">tech</a>
+                <a class="dropdown-item" href="{% url 'newsapp:international_news' %}">international</a>
+                <a class="dropdown-item" href="{% url 'newsapp:health_news' %}">health</a>
+                <a class="dropdown-item" href="{% url 'newsapp:business_news' %}">business</a>
+                <a class="dropdown-item" href="{% url 'newsapp:entertainment_news' %}">entertainment</a>
+              </div>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </nav>
+
+<!--  ***************** video portion starts here ! ********************** -->
+    <header>
+      <div class="overlay"></div>
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="{% static 'blog/drone.mp4' %}" type="video/mp4">
+      </video>
+      <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <h1 class="display-3">Ultimate UAV</h1>
+            <p class="lead mb-0">The Future Intelligence</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ">
+            Drones, also called unmanned aerial vehicles (UAVs), have no human pilot onboard, and instead are either controlled by a person on the ground or autonomously via a computer program. These stealth craft are becoming increasingly popular, not just for war and military purposes, but also for everything from wildlife and atmospheric research to disaster relief and sports photography. Drones are becoming the eyes and ears of scientists by surveying the ground for archaeological sites, signs of illegal hunting and crop damage, and even zipping inside hurricanes to study the wild storms. You can even rent a personal drone to soar above the horizon and snap a photo or video. Our news and features will cover developments in drone technologies, innovative uses for drones and how drone use will impact society.
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--  ***************** video portion ends here ! ********************** -->
+<!-- ad space starting -->
+<div class="container">
+  <div class="advertisment">
+    <h1 class="align-center">Space for advertisment !</h1>
+
+  </div>
+
+</div>
+<!-- ad space ending -->
+<div class="container contain">
+  <div class="row">
+    <div class="col-sm-7 ">
+      <div class="block-1">
+
+        <img src="{% static 'blog/images/drone-img2.jpg' %}" class="img-fluid" alt="Responsive image">
+        <p class="bottom-left">The scary thing about the future... there will be tiny cameras everywhere, and they'll be flying around like mosquitoes and drones. That will be bad. Drones are scary. You can't reason with a drone.
+   by -: Matt Groening
+         </p>
+<a href="{% url 'blog:blog_listing' %}"><button type="button" class="btn btn-outline-primary bottom-left-button" >Read more</button></a>
+      </div>
+        </div>
+
+  <div class="col-sm-5 ">
+
+        <div class="block-2">
+        <img src="{% static 'blog/images/drone-img1.jpg' %}" class="img-fluid" alt="Responsive image">
+
+        <p class="bottom-left">Drones overall will be more impactful than I think people recognize in positive ways to help society.
+         </p>
+<a href="{% url 'blog:blog_listing' %}"><button type="button" class="btn btn-outline-primary bottom-left-button" >Read more</button></a>        </div>
+
+        <div class="block-3">
+        <img src="{% static 'blog/images/drone-img3.jpg' %}" class="img-fluid" alt="Responsive image">
+        <p class="bottom-left">A man on a mission is far different from a drone on a deadline.
+        </p>
+          <a href="{% url 'blog:blog_listing' %}"><button type="button" class="btn btn-outline-primary bottom-left-button" >Read more</button></a>
+        </div>
+
+  </div>
+
+  </div>
+
+
+</div>
+
+<div class="container">
+  <p>What one Predator drone pilot described of his experience
+    fighting in the Iraq war while never leaving Nevad
+    a: 'You're going to war for 12 hours, shooting weapons at ta
+    rgets, directing kills on enemy combatants. Then you get in th
+    e car and you drive home, and within 20 minutes you're sitting at the
+    dinner table talking to your kids about their homework.</p>
+
+</div>
+
+
+<div class="container">
+  <!-- ad space starting -->
+  <div class="container">
+    <div class="advertisment">
+      <h1 class="align-center">Space for advertisment !</h1>
+
+    </div>
+
+  </div>
+  <!-- ad space ending -->
+
+
+  <div class="heading-for-blog">
+  <h1 class="text-center">More blogs !</h1>
+  </div>
+
+<div class="row">
+
+
+<div class="col-md-8">
+
+
+  <div class="row">
+    <!--Carousel Wrapper-->
+    <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+        <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+        <!--First slide-->
+        <div class="carousel-item active">
+          <a href="{% url 'blog:blog_listing' %}"><img class="d-block w-100" src="{% static 'blog/images/two-woman-sitting-on-sand-while-playing-drone-1623016.jpg' %}"></a>
+
+        </div>
+        <!--/First slide-->
+        <!--Second slide-->
+        <div class="carousel-item">
+          <a href="{% url 'blog:blog_listing' %}"><img class="d-block w-100" src="{% static 'blog/images/black-spark-quadcopter-690361.jpg' %}"></a>
+
+        </div>
+        <!--/Second slide-->
+        <!--Third slide-->
+        <div class="carousel-item">
+          <a href="{% url 'blog:blog_listing' %}"><img class="d-block w-100" src="{% static 'blog/images/gray-quadcopter-drone-2218150.jpg' %}"></a>
+
+        </div>
+        <!--/Third slide-->
+      </div>
+      <!--/.Slides-->
+      <!--Controls-->
+      <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <!--/.Controls-->
+    </div>
+    <!--/.Carousel Wrapper-->
+
+    <p></p>
+  </div>
+    </div>
+    <div class="col-md-4">
+      <div style="background-color:red; height: 100%; width: auto;;">
+
+      </div>
+
+    </div>
+
+
+</div>
+<h1>Stay Updated with latest news!</h1>
+<div class="row">
+  <a href="{% url 'newsapp:sports_news' %}">  <button type="button" class="btn btn-lg btn-primary" style="margin: 10px;" action="{% url 'newsapp:sports_news' %}">
+<i class="fas fa-volleyball-ball"></i>
+    <span>Sports</span>
+  </button></a>
+  <a href="{% url 'newsapp:science_news' %}"><button type="button" class="btn btn-lg btn-primary" style="margin: 10px;">
+    <i class="fas fa-flask"></i>
+    <span>science</span>
+  </button></a>
+  <a href="{% url 'newsapp:tech_news' %}"><button type="button" class="btn btn-lg btn-primary" style="margin: 10px;">
+    <i class="fas fa-microchip"></i>
+    <span>tech</span>
+  </button></a>
+  <a href="{% url 'newsapp:international_news' %}"><button type="button" class="btn btn-lg btn-primary" style="margin: 10px;">
+    <i class="fab fa-stack-overflow pr-1"></i>
+    <span>international</span>
+  </button></a>
+  <a href="{% url 'newsapp:health_news' %}"><button type="button" class="btn btn-lg btn-primary" style="margin: 10px;">
+    <i class="fas fa-heartbeat"></i>
+
+
+    <span>health</span>
+  </button></a>
+  <a href="{% url 'newsapp:business_news' %}"><button type="button" class="btn btn-lg btn-primary" style="margin: 10px;">
+    <i class="fab fa-stack-overflow pr-1"></i>
+    <span>business</span>
+  </button></a>
+  <a href="{% url 'newsapp:entertainment_news' %}"><button type="button" class="btn btn-lg btn-primary" style="margin: 10px;">
+      <i class="fas fa-tv"></i>
+    <span>entertainment</span>
+  </button></a>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="container">
+  <div class="ad-section text-center">
+    Space for advertisment.
+  </div>
+
+  <div class="manual-footer text-center">
+    <div class="social-buttons">
+          <a href="https://www.facebook.com/prathmesh.nandurkar.50/"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/prathmesh2048/"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919145691805"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://github.com/prathmesh2048"><i class="fab fa-github"></i>      </a>
+          <p>&copy; 2020 mywebsite.com<p>
+
+
+      </div>
+  </div>
+
+</div>
+
+
+
+<script src="https://use.fontawesome.com/a75a435f47.js"></script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

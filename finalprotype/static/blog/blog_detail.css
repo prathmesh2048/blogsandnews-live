@@ -1,0 +1,29 @@
+
+.headers{
+margin: 15px 0 15px 0;
+}
+
+.background-section img{
+width: 100%;
+height:70vh;
+margin-top: 25px;
+
+}
+.ad-banner{
+background-color: #42f5e0;
+width: 100%;
+height: 100%;
+padding: 10px;
+border: 2px solid black;
+}
+.content{
+margin:5vh;
+padding:2vh;
+}
+
+.last-ad{
+background-color: #42f5e0;
+width: 100%;
+height: 100px;
+padding: 10px;
+}
